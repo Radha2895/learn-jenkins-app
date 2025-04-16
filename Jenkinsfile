@@ -10,12 +10,14 @@ pipeline {
                 }
             }
             steps {
+               sh '''
                 ls -la
                 npm --version
                 npm ci
                 npm run build
                 ls -la
                 echo 'Hello World'
+                '''
             }
         }
     }
